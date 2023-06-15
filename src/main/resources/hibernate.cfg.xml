@@ -3,14 +3,14 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
        <session-factory>
-              <!--JOBC DATABASE  CONNECTION SETTINGS -->
+              <!--JDBC DATABASE  CONNECTION SETTINGS -->
               <property name="connection.driver_class">org.postgresql.Driver</property>
-              <property name="connection.url">jdbc:postgresql://db.wttgtdmstbcphuirskye.supabase.co:5432/postgres</property>
+              <property name="connection.url">jdbc:postgresql://db.pqefqgyvovgxijixztgh.supabase.co:5432/postgres</property>
               <property name="connection.username">postgres</property>
-              <property name="connection.password">ru7mxasM8g9$V8@</property>
+              <property name="connection.password">1120CorBin!!</property>
               <!--JDBC connection pool settings ... using built in test pool -->
               <property name="connection.pool_size">1</property>
-              <!--Select our SQL dialet-->
+              <!--Select our SQL dialect-->
               <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
               <!--Echo the SQL to stdout -->
               <property name="show_sql">true</property>

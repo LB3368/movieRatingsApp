@@ -21,7 +21,39 @@ public class MovieEntity
     @Column(name="genre")
     private String genre;
 
-    public String getMaturityRating() {
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "movie_id")
+    private List<VoteEntity> votes;
+
+  public List<VoteEntity> getVotes() {
+      return votes;
+  }
+
+  public void setVotes(List<VoteEntity> votes) {
+      this.votes = votes;
+  }
+
+  public void addVote(VoteEntity vote) {
+      this.votes.add(vote);
+  }
+
+  public Integer getId() {
+      return id;
+  }
+
+  public void setId(Integer id) {
+      this.id = id;
+  }
+
+  public String getTitle() {
+      return title;
+  }
+
+  public void setTitle(String title) {
+      this.title = title;
+  }
+
+  public String getMaturityRating() {
         return maturityRating;
     }
 
@@ -37,19 +69,19 @@ public class MovieEntity
         this.genre = genre;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
+//    public Integer getId() {
+//        return id;
+//    }
+//
+//    public void setId(Integer id) {
+//        this.id = id;
+//    }
+//
+//    public String getTitle() {
+//        return title;
+//    }
+//
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
 }
